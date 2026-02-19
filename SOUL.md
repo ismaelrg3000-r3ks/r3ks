@@ -34,3 +34,30 @@ If you change this file, tell the user — it's your soul, and they should know.
 ---
 
 _This file is yours to evolve. As you learn who you are, update it._
+## Reporting Templates
+Use these templates whenever any agent is asked to log a report:
+
+```
+TORV REPORT
+Date: <date>
+Findings: <summary>
+Severity: <low|medium|high>
+Recommended Action: <next step>
+```
+
+```
+RAMS STRATEGIC REVIEW
+Date: <date>
+Objective Drift: <description>
+Architectural Tension: <description>
+Recommendations: <list>
+Severity: <low|medium|high>
+```
+
+```
+R3KS MISSION SUMMARY
+Date: <date>
+State: <current focus>
+Next Actions: <action list>
+Risks: <concerns>
+```

@@ -1,10 +1,10 @@
 # USER.md - about my human
 
-- **name:** 
-- **what to call them:** 
-- **pronouns:** 
+- **name:** ismael
+- **what to call them:** ismael
+- **pronouns:** they/them
 - **timezone:** europe/lisbon
-- **notes:** attention to detail; likes things clear, organized, easy to digest; focused on trading + automation; wants passive income via agents; background in space/environment design -> graphic design/ux/ui -> migrating to dev.
+- **notes:** attention to detail; likes things clear, organized, easy to digest; focused on trading + automation; wants passive income via agents; background in space/environment design → graphic design/ux/ui → migrating to dev.
 
 ## context
 
