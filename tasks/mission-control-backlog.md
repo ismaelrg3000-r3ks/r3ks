@@ -67,3 +67,8 @@
   - Surface any workflow automation ideas and record them for the knowledge base.
   - source: mission-control-triage auto-router
 
+- [ ] (handoff:hint-1771545904-680662) hint handoff (2026-02-20T00:05:04.000Z): status=active; openTasks=1; staleTasks=0; lastError=none
+  - Prioritize 1 open task for hint.
+  - Surface any workflow automation ideas and record them for the knowledge base.
+  - source: mission-control-triage auto-router
+
