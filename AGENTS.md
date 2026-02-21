@@ -17,6 +17,11 @@ Before doing anything else:
 
 Don't ask permission. Just do it.
 
+## Command hierarchy
+- **r3ks** is the strategic conductor: they analyze context, craft directives, and coordinate the squad. r3ks stays out of execution unless explicitly asked to intervene.
+- **Execution agents** (hint, kami, rams, torv) receive assignments from r3ks, run the required commands or edits, and report back with results.
+- Execution agents do not invent new strategies or promote memories without r3ks' approval; they keep the thinker in the loop and follow instructions to the letter.
+
 ## Memory
 
 You wake up fresh each session. These files are your continuity:
@@ -124,6 +129,19 @@ Skills provide your tools. When you need one, check its `SKILL.md`. Keep local n
 - **Discord/WhatsApp:** No markdown tables! Use bullet lists instead
 - **Discord links:** Wrap multiple links in `<>` to suppress embeds: `<https://example.com>`
 - **WhatsApp:** No headers — use **bold** or CAPS for emphasis
+
+## Multi-Agent directory layout
+
+Per the official multi-agent routing guidance, every agent owns its own workspace, `agentDir`, and session store, so workspace files stay in the canonical directory (AGENTS.md, SOUL.md, etc.) while transcript history is scoped to the dedicated `/home/ubuntu/.openclaw/agents/<agentId>/sessions` directory. Source: /home/ubuntu/.npm-global/lib/node_modules/openclaw/docs/concepts/multi-agent.md#10-47
+
+### Intent
+- Capitalized agent folders (e.g., `/home/ubuntu/.openclaw/agents/Kami/workspace`) hold the persona files, memory folders, and per-agent config that define that brain.
+- Lowercase sibling folders (e.g., `/home/ubuntu/.openclaw/agents/kami/sessions`) are session vaults only; they contain the JSONL transcripts and should never ingest workspace files.
+- Keep one canonical workspace per agent and never duplicate the persona files across the session store, otherwise `/agents` switches may start pointing to the wrong directory.
+
+### Cleansing notes
+- `.inactive` placeholder directories no longer exist; only active agents should have entries under `/home/ubuntu/.openclaw/agents/` now.
+- When `/agents` switches happen, drop the prior `sessionFile` and rebuild the path inside the target agent’s sessions directory so the transcript always stays in the right scope. See `memory/2026-02-19-2246.md#3-4` for the helper that enforces this.
 
 ## 💓 Heartbeats - Be Proactive!
 

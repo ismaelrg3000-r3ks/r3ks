@@ -4,7 +4,7 @@
 - **what to call them:** ismael
 - **pronouns:** they/them
 - **timezone:** europe/lisbon
-- **notes:** attention to detail; likes things clear, organized, easy to digest; focused on trading + automation; wants passive income via agents; background in space/environment design → graphic design/ux/ui → migrating to dev.
+- **notes:** attention to detail; likes things clear, organized, easy to digest; focused on trading + automation; wants passive income via agents; background in space/environment design → graphic design/ux/ui → migrating to dev; obsessed with singular sources of truth—no clutter, no ambiguity, and no extra tabs. Prefers clean housekeeping over multiple mirrors.
 
 ## context
 
