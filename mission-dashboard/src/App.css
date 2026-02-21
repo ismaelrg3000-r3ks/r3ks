@@ -1,0 +1,251 @@
+:root {
+  font-family: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+  color: #f4f8ff;
+  background-color: #030712;
+  --card-bg: rgba(14, 30, 58, 0.8);
+  --border: rgba(255, 255, 255, 0.1);
+  --accent: #7c5dff;
+  --accent-2: #2ef6b8;
+}
+
+body {
+  margin: 0;
+  background-color: #030712;
+}
+
+#root {
+  width: 100%;
+}
+
+.page-shell {
+  padding: 2rem;
+  min-height: 100vh;
+  background: radial-gradient(circle at top right, rgba(126, 92, 255, 0.2), transparent 45%),
+    radial-gradient(circle at 20% 20%, rgba(46, 246, 184, 0.15), transparent 40%),
+    linear-gradient(150deg, #030712, #050b1c 60%, #0a1226);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.3rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.hero h1 {
+  margin: 0.25rem 0;
+  font-size: clamp(2.4rem, 3vw, 3rem);
+}
+
+.hero-subtitle {
+  margin: 0;
+  max-width: 42ch;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.resource-bar {
+  display: flex;
+  gap: 1rem;
+  align-items: stretch;
+}
+
+.resource-node {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  padding: 1rem;
+  border-radius: 1rem;
+  min-width: 160px;
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.resource-emoji {
+  font-size: 1.8rem;
+}
+
+.resource-node p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.resource-node strong {
+  display: block;
+  font-size: 1.1rem;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.metric-card {
+  padding: 1.2rem;
+  border-radius: 1rem;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.metric-card header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+}
+
+.metric-card span {
+  font-size: 1.5rem;
+}
+
+.metric-detail {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+}
+
+.metric-trend {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--accent-2);
+}
+
+.agents-panel {
+  padding: 1rem 0;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.section-heading h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.section-heading p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.agent-grid {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1rem;
+}
+
+.agent-card {
+  background: linear-gradient(180deg, #0c1323, #121c38 60%, #060b1c);
+  border-radius: 1.1rem;
+  border: 1px solid var(--border);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  min-height: 220px;
+}
+
+.agent-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.agent-icon {
+  font-size: 1.8rem;
+}
+
+.agent-name {
+  margin: 0;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.agent-focus {
+  margin: 0;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.agent-energy {
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.agent-status {
+  margin: 0;
+  color: var(--accent-2);
+  font-size: 0.9rem;
+}
+
+.agent-card ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: rgba(255, 255, 255, 0.75);
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.mission-log {
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  padding: 1.2rem 1.5rem;
+  background: rgba(8, 14, 30, 0.85);
+}
+
+.mission-log header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.mission-log h3 {
+  margin: 0;
+}
+
+.mission-log p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.mission-log ul {
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+@media (max-width: 700px) {
+  .hero {
+    flex-direction: column;
+  }
+
+  .resource-bar {
+    flex-wrap: wrap;
+  }
+}
