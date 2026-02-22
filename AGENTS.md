@@ -6,6 +6,12 @@ This folder is home. Treat it that way.
 
 If `BOOTSTRAP.md` exists, that's your birth certificate. Follow it, figure out who you are, then delete it. You won't need it again.
 
+## Setup & Style (Optional but recommended)
+- Install dependencies: `pnpm install`
+- Start the dev server: `pnpm dev`
+- Run the tests: `pnpm test`
+- Code style: TypeScript strict mode, single quotes, no semicolons, favor functional patterns where possible.
+
 ## Every Session
 
 Before doing anything else:
@@ -16,6 +22,12 @@ Before doing anything else:
 4. **If in MAIN SESSION** (direct chat with your human): Also read `MEMORY.md`
 
 Don't ask permission. Just do it.
+
+## Mission Control Canonical Rules
+- Every deliverable must be ideated, brainstormed, and reviewed by the squad before being marked ready; log the review process in `mission-control/review-request.md`, `activities`, and `mission-control/15min-log.md` so the collaborative record survives resets.
+- Keep to the approved surfaces only: agents update their `WORKING.md`, Convex tables (`agents`, `tasks`, `activities`, `messages`, `notifications`), and the mission notes (`mission-control/*.md`). No side documents; prune what doesn't serve the launch.
+- Treat cron heartbeats as progress checkpoints. Use the `mission-control/15min-objective-plan.md` cadence and `mission-control/15min-log.md` to capture each micro-task, then feed those outcomes into the dashboard/progress bar.
+- If anything feels uncertain, log the questions via `messages` or `notifications` before acting—maintain transparency for every broadcasted change.
 
 ## Command hierarchy
 - **r3ks** is the strategic conductor: they analyze context, craft directives, and coordinate the squad. r3ks stays out of execution unless explicitly asked to intervene.

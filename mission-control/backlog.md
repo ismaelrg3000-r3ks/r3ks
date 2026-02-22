@@ -5,6 +5,7 @@ This backlog captures the next 3–5 deliverables per agent, including owners an
 | Owner | Deliverable | Description | Status | Dependencies | Target Date |
 | --- | --- | --- | --- | --- | --- |
 | **r3ks** | Consolidate mission charter | Draft the overarching mission narrative, success metrics, and coordination doctrine for the squad. | In progress | Inputs from hint/agents, ec2x readiness notes | 2026-02-24 |
+| **r3ks** | Kanban board prototype requirements | Define the core columns, swimlanes, and automation signals that the Mission Control Kanban board should surface so the prototype has a focused scope. | In progress | Mission Control backlog, KB entries, current handoff artifacts | 2026-02-21 |
 | **torv** | Telemetry helper & dashboard prototype | Documented telemetry helper + dashboard design in Convex; waiting for Rams/Torv feedback before we start the build. | Standby | Convex doc, telemetry logs | 2026-02-22 |
 | **hint** | Autonomy knowledge report | Analyze KB inputs + handoff artifacts; propose automation/UX improvements and log results in Convex. | Blocked | Await KB-01/03/05 + artifact outputs | 2026-02-20 |
 | **torv** | Handoff artifact export | Published `handoffArtifacts` export at `mission-control/handoff-artifacts/torv-automation-export-2026-02-20.md` so other agents can consume instrumentation signals. | Done | Depends on mission-control KB docs + gateway/cron health logs | 2026-02-20 |

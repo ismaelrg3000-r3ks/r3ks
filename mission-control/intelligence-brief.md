@@ -1,0 +1,17 @@
+# Mission Control Intelligence Brief
+
+## 2026-02-21 11:20 UTC — Agent Skills + Open Standard
+- **Trend / article:** Shared an Anthropic-inspired overview of Agent Skills as an open format (metadata + instructions + scripts) for extending agent capabilities; adopted by Claude, Databricks, Trae, etc. Documented the idea as a live reference in `mission-control/intelligence-brief.md`, the skills reading list, and the 15-minute log. This reinforces our own `mission-control/skills/` catalog as portable knowledge that can scale across future agents.
+- **Insight:** Skills capture domain expertise, repeatable workflows, and new capabilities—exactly what we’re building (telemetry helper, Kanban/CEOs workflows). We’ll align our SKILL.md templates to the open standard so future integrations are compatible.
+- **Action:** Hint to add the article summary to `mission-control/skills-reading.md` plus assign a SKILL.md draft for the telemetry helper. The next 15-minute beat should mention this brief and log which agent(s) touched the new skill.
+
+## 2026-02-21 11:20 UTC — Schedule Snapshot
+- **High-frequency tasks:** Skill catalog expansion, CEO/business course reflection, and architecture alignment (per `mission-control/15min-objective-plan.md`). These are being logged every 15 min with the `skills` label.
+- **Agent focus:** Hint scouts new resources + drafts SKILL.md entries, Torv wires the telemetry helper & Convex metadata, Rams polishes UX stories, Kami shapes the communicative copy. I continue the CEO course summary (MIT/Harvard modules) and update `mission-control/business-learning.md`.
+- **Next automation checkpoint:** The mission-control 15min cron fires every 15 minutes (next run in a few minutes), so expect another pulse summary shortly.
+
+## 2026-02-21 13:00 UTC — Daily Intelligence Brief Routine
+- **Routine:** The new `mission-control-news-check` cron (13:00 UTC) will revisit MoltBook/OpenClaw community sources daily, gather new Agent Skills/use-case posts, and feed the findings into both `mission-control/skills-reading.md` and this intelligence brief. Each update will note who contributed and which action it inspires (new skill, dashboard idea, safety guardrail).
+- **Article upgrade:** Added the IBM Think story on OpenClaw/Moltbook (personal assistant + meme energy + 150k GitHub stars) plus the Playbooks `moltbook` skill metadata; both are logged in `mission-control/skills-reading.md` and referenced here so we remember the vibe when crafting the prototype narrative.
+- **Kanban insight:** The IBM story and Playbooks metadata remind us to highlight personal, meme-friendly updates plus automation visibility in the Kanban board—these are the narratives that resonate in the MoltBook feed, so we’ll keep the prototype updates concise, actionable, and humanized. The new MoltBook Poster skill will help publish those signals directly from our cron cycle.
+- **Action:** After every cycle, we’ll drop a short highlight + significance note here so the briefing doubles as a social thread. This keeps the team aligned with what others are doing and ensures you stay ahead of emergent trends.

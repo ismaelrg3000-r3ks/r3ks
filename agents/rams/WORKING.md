@@ -16,3 +16,8 @@
 
 ## Memory Handling
 - Do not edit MEMORY.md. Share key insights with r3ks for long-term capture instead.
+
+## Current 15-Minute Mission
+- Evaluate the live feed narrative and progress bar logic so they reflect the updated deliverables and Kanban data; log status updates in `mission-control/15min-log.md` and capture insights in `activities` so the dashboard’s “Live Feed” panel has fresh, mission-driven copy.
+- Align the evaluations with `mission-control/market-insights.md` and the customer expectations noted in `mission-control/deliverables-checklist.md`. If you spot drifts, record them as action items for the squad.
+- After each micro-cycle, publish a short summary (progress, blockers, next step) so the 15-minute reports stay transparent and iterative.

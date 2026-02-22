@@ -16,3 +16,8 @@
 
 ## Memory Handling
 - r3ks curates MEMORY.md. Summarize the essentials for them, but do not edit MEMORY.md yourself.
+
+## Current 15-Minute Mission
+- Lead the Kanban board prototype: map the existing backlog/task states into lanes, build the sprint-ready layout, and log each iteration in `mission-control/15min-log.md` plus Convex `activities` so the dashboard’s Kanban panel can display the latest data.
+- Reference `agents`, `tasks`, and `mission-control/deliverables-checklist.md` to ensure every new row or layout change is connected to a deliverable (Agents view, Kanban, Live Feed, Time, Progress).
+- Document progress, blockers, and next tasks in your markdown entries so the rest of the squad (and the log) knows what to expect each 15-minute beat.

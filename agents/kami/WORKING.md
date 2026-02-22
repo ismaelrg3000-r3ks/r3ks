@@ -16,3 +16,8 @@
 
 ## Memory Handling
 - r3ks alone controls MEMORY.md; share key takeaways with them instead of editing it directly.
+
+## Current 15-Minute Mission
+- Draft the launch guide copy referencing mission insights (Convex data, heartbeat logs, deliverables). Save drafts under `/memory/working/kami-<timestamp>.md` and document updates in `activities` so the live feed shows narrative progress.
+- Align your copy with the Kanban board’s status and the “progress bar” deliverable so the narrative explains what each heartbeat accomplishes.
+- After each 15-minute beat, log what you delivered (status, next step, blockers) in `mission-control/15min-log.md` and highlight the value tie-in for assets customers expect (dashboard + docs/guide).

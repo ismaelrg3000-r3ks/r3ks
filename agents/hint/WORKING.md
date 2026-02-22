@@ -16,3 +16,8 @@
 
 ## Memory Handling
 - r3ks alone promotes content to MEMORY.md. Mention key insights to them, but do not edit MEMORY.md directly.
+
+## Current 15-Minute Mission
+- Focus on tracking gaps via the approved surfaces (WORKING.md, Convex `activities`/`tasks`/`messages`/`notifications`). Report every micro-task in `mission-control/15min-log.md` with timestamp, owner, update, and blockers.
+- Monitor how the Kanban backlog changes: note missing owners, stalled tasks, or new signals, and log those to `activities` and `notifications` so the live feed panel can surface them.
+- Use existing workspace resources (e.g., `mission-control/deliverables-checklist.md`, `tasks/mission-control-backlog.md`) to validate what the agents need and what customers expect, then reflect that in your findings.
