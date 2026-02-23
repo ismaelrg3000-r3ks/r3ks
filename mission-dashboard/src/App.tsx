@@ -10,7 +10,7 @@ const metrics = [
 const agents = [
   {
     name: 'kami',
-    focus: 'Narratives + visual threads',
+    role: 'Lead storyteller',
     status: 'Wireframe sprint',
     energy: 82,
     tasks: ['Mission deck polish', 'UX roadmap note'],
@@ -18,7 +18,7 @@ const agents = [
   },
   {
     name: 'torv',
-    focus: 'DevOps + automation',
+    role: 'Automation engineer',
     status: 'Syncing logs',
     energy: 69,
     tasks: ['Bridge mission-control data', 'Map idle-game pacing'],
@@ -26,7 +26,7 @@ const agents = [
   },
   {
     name: 'rams',
-    focus: 'Clarity audits',
+    role: 'Clarity auditor',
     status: 'Listening to signals',
     energy: 54,
     tasks: ['Sanity check KB entries', 'Log vulnerability notes'],
@@ -34,7 +34,7 @@ const agents = [
   },
   {
     name: 'hint',
-    focus: 'Research + strategy',
+    role: 'Research scout',
     status: 'Scanning niches',
     energy: 91,
     tasks: ['Profile idle-game analogues', 'Build research brief'],
@@ -42,20 +42,32 @@ const agents = [
   },
 ]
 
-const logEntries = [
-  '12:02 — Kami swapped neon tokens for mission badges.',
-  '11:44 — Torv spun up a low-latency loop to keep agents feeling present.',
-  '11:10 — Hint surfaced three niche archetypes that could shape the dashboard story.',
-  '10:55 — Rams tagged a knowledge gap, queued it for the next micro-retro.',
-]
-
-const resourceNodes = [
-  { label: 'Design Fuel', value: '6/8 sparks', emoji: '🎨' },
-  { label: 'Data Stream', value: '45 events/min', emoji: '📡' },
-  { label: 'Calm Meter', value: 'Tranquil', emoji: '🧘' },
+const kanbanColumns = [
+  {
+    title: 'Inbox',
+    items: ['Capture niche stories', 'Collect agent updates'],
+  },
+  {
+    title: 'Assigned',
+    items: ['Craft automation lab pitch', 'Sketch creative agency glow'],
+  },
+  {
+    title: 'In progress',
+    items: ['Wireframe menu + tools', 'Prototype agent interactions'],
+  },
+  {
+    title: 'Review',
+    items: ['Sync with hint/kami group share'],
+  },
+  {
+    title: 'Done',
+    items: ['Mission Control base layout'],
+  },
 ]
 
 type Metric = (typeof metrics)[number]
+
+type Agent = (typeof agents)[number]
 
 function MetricCard({ metric }: { metric: Metric }) {
   return (
@@ -70,14 +82,14 @@ function MetricCard({ metric }: { metric: Metric }) {
   )
 }
 
-function AgentCard({ agent }: { agent: (typeof agents)[number] }) {
+function AgentCard({ agent }: { agent: Agent }) {
   return (
     <article className="agent-card">
       <div className="agent-header">
         <div className="agent-icon">{agent.icon}</div>
         <div>
           <p className="agent-name">{agent.name}</p>
-          <p className="agent-focus">{agent.focus}</p>
+          <p className="agent-focus">{agent.role}</p>
         </div>
         <span className="agent-energy">{agent.energy}%</span>
       </div>
@@ -88,6 +100,44 @@ function AgentCard({ agent }: { agent: (typeof agents)[number] }) {
         ))}
       </ul>
     </article>
+  )
+}
+
+const logEntries = [
+  '12:02 — Kami swapped neon tokens for mission badges.',
+  '11:44 — Torv spun up a low-latency loop to keep agents feeling present.',
+  '11:10 — Hint surfaced three niche archetypes that could shape the dashboard story.',
+  '10:55 — Rams tagged a knowledge gap, queued it for the next micro-retro.',
+]
+
+const resourceNodes = [
+  { label: 'Design Fuel', value: '6/8 sparks', emoji: '🎨' },
+  { label: 'Data Stream', value: '45 events/min', emoji: '📡' },
+  { label: 'Calm Meter', value: 'Tranquil', emoji: '🧘' },
+]
+
+const liveFilters = ['All agents', 'Tasks', 'Comments', 'Decisions', 'Docs', 'Status']
+
+const liveEntries = [
+  { type: 'Tasks', text: 'Hint marked “pipeline storyboard” as top priority.' },
+  { type: 'Comments', text: 'Kami dropped a color cue in the hero panel.' },
+  { type: 'Status', text: 'Torv reports stable latency across automations.' },
+  { type: 'Decisions', text: 'Group approved the menu layout for the tycoon controls.' },
+]
+
+function ResourceBar() {
+  return (
+    <section className="resource-bar">
+      {resourceNodes.map((node) => (
+        <div key={node.label} className="resource-node">
+          <span className="resource-emoji">{node.emoji}</span>
+          <div>
+            <p>{node.label}</p>
+            <strong>{node.value}</strong>
+          </div>
+        </div>
+      ))}
+    </section>
   )
 }
 
@@ -107,55 +157,100 @@ function MissionLog() {
   )
 }
 
-function ResourceBar() {
+function KanbanBoard() {
   return (
-    <section className="resource-bar">
-      {resourceNodes.map((node) => (
-        <div key={node.label} className="resource-node">
-          <span className="resource-emoji">{node.emoji}</span>
-          <div>
-            <p>{node.label}</p>
-            <strong>{node.value}</strong>
-          </div>
-        </div>
-      ))}
+    <section className="kanban-board">
+      <header>
+        <h3>Mission queue</h3>
+        <p>Drag, drop, or tap to keep things flowing.</p>
+      </header>
+      <div className="kanban-columns">
+        {kanbanColumns.map((column) => (
+          <article key={column.title} className="kanban-column">
+            <h4>{column.title}</h4>
+            <ul>
+              {column.items.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </article>
+        ))}
+      </div>
     </section>
+  )
+}
+
+function LiveFeed() {
+  return (
+    <section className="live-feed">
+      <header>
+        <h3>Live feed</h3>
+        <div className="live-tabs">
+          {liveFilters.map((filter) => (
+            <button key={filter}>{filter}</button>
+          ))}
+        </div>
+      </header>
+      <ul>
+        {liveEntries.map((entry) => (
+          <li key={entry.text}>
+            <span className="live-tag">{entry.type}</span>
+            {entry.text}
+          </li>
+        ))}
+      </ul>
+    </section>
+  )
+}
+
+function ControlHeader() {
+  return (
+    <header className="control-header">
+      <div>
+        <p className="eyebrow">Mission Control</p>
+        <h1>Virtual office tycoon</h1>
+        <p className="hero-subtitle">
+          Interactive cockpit for non-technical folks. Track agents, tasks, and the story behind each signal.
+        </p>
+      </div>
+      <div className="header-stats">
+        <p>Active agents · 4</p>
+        <p>Tasks in queue · 18</p>
+        <div className="header-actions">
+          <button>Docs</button>
+          <span>online</span>
+        </div>
+        <p>{new Date().toLocaleString()}</p>
+      </div>
+    </header>
   )
 }
 
 function App() {
   return (
     <div className="page-shell">
-      <header className="hero">
-        <div>
-          <p className="eyebrow">Mission Control / Virtual Office</p>
-          <h1>Agent cockpit</h1>
-          <p className="hero-subtitle">
-            A playful workspace that mirrors our crew’s energy, research, and niche-tuned metrics. Each
-            customer can swap the signals to match their own industry story.
-          </p>
+      <ControlHeader />
+      <ResourceBar />
+      <section className="dashboard-columns">
+        <div className="agents-panel">
+          <div className="section-heading">
+            <h2>Agents</h2>
+            <p>Role + status</p>
+          </div>
+          <div className="agent-grid">
+            {agents.map((agent) => (
+              <AgentCard key={agent.name} agent={agent} />
+            ))}
+          </div>
         </div>
-        <ResourceBar />
-      </header>
-
+        <KanbanBoard />
+      </section>
       <section className="metrics-grid">
         {metrics.map((metric) => (
           <MetricCard key={metric.label} metric={metric} />
         ))}
       </section>
-
-      <section className="agents-panel">
-        <div className="section-heading">
-          <h2>Agents at work</h2>
-          <p>Live statuses, focus shifts, and task trails</p>
-        </div>
-        <div className="agent-grid">
-          {agents.map((agent) => (
-            <AgentCard key={agent.name} agent={agent} />
-          ))}
-        </div>
-      </section>
-
+      <LiveFeed />
       <MissionLog />
     </div>
   )
