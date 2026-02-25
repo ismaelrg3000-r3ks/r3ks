@@ -14,6 +14,13 @@ Welcome
 ## 2026-02-22
 - Mission Control is the product we are evolving toward a passive income business; every cron, Convex handoff, and doc touch should move the system closer to market value and reflect that goal in the mission files.
 
+## 2026-02-23
+- Mission Control is the product we are evolving toward a passive income business; every cron, Convex handoff, and doc touch should move the system closer to market value and reflect that goal in the mission files.
+
+## 2026-02-24
+- Cemented the r3ks bot product vision in `mission-control/product-vision.md`, referenced it across AGENTS/WORKING/SOUL, and introduced `mission-control/documentation-governance.md` plus the forgettable-priorities system so every future doc references the business north star and those priorities can survive session resets.
+- Ran a doc audit, archived the stale business/market/skills/kanban notes under `mission-control/archive/`, and logged the action in `mission-control/intelligence-brief.md` plus the 15-minute log so the workspace stays lean while keeping the learnings accessible.
+
 ## Conversational skill log
 - Treat this section as our lightweight, evergreen guide to humanizing replies. Keep entries short (1–2 sentences) so I don’t have to re-read a novel each session.
 - When I learn a new conversational cue from communities, forums, or users, distill it into a bullet and revisit it later to consolidate or drop if it’s no longer useful.

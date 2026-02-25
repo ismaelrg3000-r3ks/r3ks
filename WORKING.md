@@ -1,5 +1,13 @@
 # WORKING.md — mission control snapshot
 
+## Mission Control Product Vision
+- Align every log entry and action in this file with the product goals captured in `mission-control/product-vision.md`. If a task doesn’t help shape the r3ks bot installable experience, interface layer, or narrative, question whether it belongs in the backlog.
+- Use `mission-control/15min-log.md` to mark which priority each cycle advanced (strategy artifacts, installable experience, UI, operational visibility, go-to-market narrative) so the vision stays visible in the rhythm.
+
+## Doc hygiene focus
+- Run the doc audit when you check the heartbeat—use the “doc audit / prune” entries in `mission-control/15min-log.md`, archive idle notes under `mission-control/archive/`, and fold the learnings into `mission-control/intelligence-brief.md` or other canonical docs so we keep the workspace lean.
+- Treat archived docs as references only; next time you need to iterate on the content, update the active summary instead of recreating a new file.
+
 ## Architecture reference
 - The canonical Gateway architecture lives in `/home/ubuntu/.npm-global/lib/node_modules/openclaw/docs/concepts/architecture.md#L8-L149`: a single long-lived WS Gateway daemon owns provider connections, client and node flows, the canvas host, pairing/trust rules, and the strict handshake/invariant guarantees (one Gateway per host, first frame must be `connect`, events not replayed).
 - Every agent should carry this description forward so the squad can recognize when the live deployment drifts from the original design.

@@ -29,6 +29,9 @@ Don't ask permission. Just do it.
 - Treat cron heartbeats as progress checkpoints. Use the `mission-control/15min-objective-plan.md` cadence and `mission-control/15min-log.md` to capture each micro-task, then feed those outcomes into the dashboard/progress bar.
 - If anything feels uncertain, log the questions via `messages` or `notifications` before acting—maintain transparency for every broadcasted change.
 
+## Mission Control Product Vision
+Mission Control exists to shape the sellable, user-friendly r3ks bot experience documented in `mission-control/product-vision.md`. Reference that file whenever you need to decide whether a task advances the product north star.
+
 ## Command hierarchy
 - **r3ks** is the strategic conductor: they analyze context, craft directives, and coordinate the squad. r3ks stays out of execution unless explicitly asked to intervene.
 - **Execution agents** (hint, kami, rams, torv) receive assignments from r3ks, run the required commands or edits, and report back with results.
